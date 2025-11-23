@@ -5,6 +5,7 @@ import Motto from "../Motto/Motto";
 import PopularMenu from "../PopularMenu/PopularMenu";
 import Recomended from "../Recomended/Recomended";
 import Featured from "../Featured/Featured";
+import Testimmonial from "../Testimonial/Testimmonial";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <PopularMenu></PopularMenu>
       <Recomended></Recomended>
       <Featured></Featured>
+      <Testimmonial></Testimmonial>
     </div>
   );
 };
