@@ -17,8 +17,8 @@ const Recomended = () => {
       });
   }, []);
   return (
-    <div className="max-w-7xl mt-7">
-      <div className="h-60 mt-7 " style={{ backgroundImage: `url(${img2})` }}>
+    <div className="max-w-7xl my-12">
+      <div className="h-60 my-9 " style={{ backgroundImage: `url(${img2})` }}>
         <h2 className="h-60 backdrop-blur-2xl  backdrop-saturate-50 text-black text-7xl text-center pt-14">
           01406584258
         </h2>
