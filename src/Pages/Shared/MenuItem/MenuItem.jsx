@@ -5,7 +5,7 @@ const MenuItem = ({ item }) => {
   return (
     <div className="flex space-x-4">
       <img
-        style={{ borderRadius: "0 200px 200px 200px" }}
+        style={{ borderRadius: "5px" }}
         className="w-[110px]"
         src={image}
         alt=""
