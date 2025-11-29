@@ -6,10 +6,14 @@ import PopularMenu from "../PopularMenu/PopularMenu";
 import Recomended from "../Recomended/Recomended";
 import Featured from "../Featured/Featured";
 import Testimmonial from "../Testimonial/Testimmonial";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Mesa Elegante | Home</title>
+      </Helmet>
       <Banner></Banner>
       <Category></Category>
       <Motto></Motto>

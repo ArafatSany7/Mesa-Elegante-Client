@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const navOption = (
     <>
       <div className="flex border-b border-white/20 max-w-7xl shadow-sm ">
         <li>
-          <a>Item 1</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a>Item 2</a>
+          <Link to="/menu">Menu</Link>
         </li>
+
         <li>
           <a>Item 3</a>
         </li>
