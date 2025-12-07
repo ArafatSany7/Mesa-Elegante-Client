@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import SectionTittle from "../../Components/SectionTittle/SectionTittle";
 import Cover from "../Shared/Cover/Cover";
 import reserveBg from "../../../../assets/reservation/category-pizza.jpg";
-import woodTexture from "../../../../assets/reservation/wood-grain-pattern-gray1x.png";
 
 const Reservation = () => {
   return (
@@ -18,20 +17,14 @@ const Reservation = () => {
         subHeading="We will confirm shortly"
       ></SectionTittle>
 
-      <div className="max-w-5xl mx-auto px-4 md:px-6 lg:px-8 pb-16">
-        <div className="relative overflow-hidden rounded-3xl border border-base-300 shadow-2xl bg-white">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-25"
-            style={{ backgroundImage: `url(${woodTexture})` }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-white/90 to-white/95 backdrop-blur-sm"></div>
-
-          <div className="relative p-6 md:p-10 lg:p-12 space-y-6 text-base-content">
+      <div className=" max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pb-16">
+        <div className="relative overflow-hidden rounded-3xl border border-base-300 glass-card  ">
+          <div className="relative p-6 md:p-10 lg:p-12 space-y-6 ">
             <div className="space-y-2 text-center">
-              <p className="text-sm uppercase tracking-[0.2em] text-neutral-500">
+              <p className="text-sm uppercase tracking-[0.2em] ">
                 Plan your visit
               </p>
-              <h2 className="text-2xl md:text-3xl font-semibold text-neutral-800">
+              <h2 className="text-2xl md:text-3xl font-semibold ">
                 Reserve your table in seconds
               </h2>
               <p className="text-sm md:text-base text-neutral-600 max-w-2xl mx-auto">
@@ -41,7 +34,7 @@ const Reservation = () => {
             </div>
 
             <form
-              className="grid gap-6 md:grid-cols-2"
+              className=" grid gap-6 md:grid-cols-2"
               onSubmit={(e) => e.preventDefault()}
             >
               <div className="form-control">

@@ -3,7 +3,7 @@ import React from "react";
 const MenuItem = ({ item }) => {
   const { name, image, price, recipe } = item;
   return (
-    <div className="flex gap-4 border-2 rounded-2xl border-primary/30 p-4 shadow-sm ring-1 ring-black/5">
+    <div className="glass-card flex gap-4 border-2 rounded-2xl border-primary/30 p-4 shadow-sm ring-1 ring-black/5">
       <img
         className="h-24 w-24 rounded-xl object-cover"
         src={image}

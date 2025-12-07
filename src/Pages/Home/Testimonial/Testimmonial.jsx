@@ -23,7 +23,7 @@ const Testimmonial = () => {
         subHeading={"What our clients say"}
         heading={"Testimonials"}
       ></SectionTittle>
-      <div className="rounded-3xl bg-white/75 p-4 shadow-xl">
+      <div className="rounded-3xl glass-card  p-4 shadow-xl">
         <Swiper
           pagination={{ type: "fraction" }}
           navigation={true}

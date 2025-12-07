@@ -35,11 +35,9 @@ const Contact = () => {
           ].map((item) => (
             <div key={item.label} className="glass-card h-full text-center p-6">
               <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 text-primary">
-                <span className="text-base font-semibold">{item.label[0]}</span>
+                <span className="font-semibold">{item.label[0]}</span>
               </div>
-              <h3 className="text-lg font-semibold text-neutral-900">
-                {item.label}
-              </h3>
+              <h3 className="text-lg font-semibold ">{item.label}</h3>
               <p className="text-sm text-neutral-600">{item.value}</p>
             </div>
           ))}
@@ -50,64 +48,46 @@ const Contact = () => {
           subHeading="We reply quickly"
         ></SectionTittle>
 
-        <div className="grid md:grid-cols-2 gap-10 items-stretch pb-12">
-          <div className="glass-card space-y-4 p-8 flex flex-col justify-center">
-            {["Dine-in", "Takeaway", "Events"].map((type) => (
-              <div key={type} className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/15 text-primary flex items-center justify-center text-sm font-semibold">
-                  {type.slice(0, 2)}
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-neutral-500">
-                    Service
-                  </p>
-                  <p className="font-semibold text-neutral-900">{type}</p>
-                </div>
-              </div>
-            ))}
+        <form className="glass-card  w-full space-y-4 p-8">
+          <div className="form-control w-full">
+            <label className="label w-full">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Your name"
+              className="input w-full input-bordered"
+              required
+            />
           </div>
-
-          <form className="glass-card space-y-4 p-8">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Your name"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="you@example.com"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Message</span>
-              </label>
-              <textarea
-                className="textarea textarea-bordered h-28"
-                placeholder="Tell us how we can help"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="btn btn-primary w-full uppercase tracking-wide"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
+          <div className="form-control w-full">
+            <label className="label w-full">
+              <span className="label-text">Email</span>
+            </label>
+            <input
+              type="email"
+              placeholder="you@example.com"
+              className="w-full input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control w-full">
+            <label className="label w-full">
+              <span className="label-text">Message</span>
+            </label>
+            <textarea
+              className=" w-full textarea textarea-bordered h-28"
+              placeholder="Tell us how we can help"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="btn btn-primary w-full uppercase tracking-wide"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
     </div>
   );

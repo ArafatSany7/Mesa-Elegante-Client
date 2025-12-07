@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="mt-16 bg-neutral text-neutral-content">
-      <div className="section-shell py-12 grid gap-8 lg:grid-cols-3">
+    <footer className="mt-16 bg-neutral">
+      <div className="section-shell py-12 my-5 h-40 grid gap-8 lg:grid-cols-3">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/20 text-lg font-bold text-primary">
@@ -11,9 +11,6 @@ const Footer = () => {
             </div>
             <div>
               <p className="text-lg font-semibold">Mesa Elegante</p>
-              <p className="text-xs uppercase tracking-[0.25em] text-neutral-300">
-                Bistro & Bar
-              </p>
             </div>
           </div>
           <p className="text-sm text-neutral-200">
