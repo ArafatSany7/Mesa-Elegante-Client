@@ -6,10 +6,12 @@ const MenuCategory = ({ items, tittle, coverImg }) => {
   return (
     <div>
       {tittle && <Cover img={coverImg} tittle={tittle}></Cover>}
-      <div className="grid md:grid-cols-2 gap-4 mb-5 mt-14 gap-7">
-        {items.map((item) => (
-          <MenuItem key={item._id} item={item}></MenuItem>
-        ))}
+      <div className="section-shell">
+        <div className="grid md:grid-cols-2 gap-6 mb-10 mt-12">
+          {items.map((item) => (
+            <MenuItem key={item._id} item={item}></MenuItem>
+          ))}
+        </div>
       </div>
     </div>
   );

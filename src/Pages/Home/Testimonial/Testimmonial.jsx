@@ -18,33 +18,37 @@ const Testimmonial = () => {
   }, []);
 
   return (
-    <section>
+    <section className="section-shell my-14">
       <SectionTittle
-        subHeading={"What Our Client say"}
-        heading={"Testimonial"}
+        subHeading={"What our clients say"}
+        heading={"Testimonials"}
       ></SectionTittle>
-      <Swiper
-        pagination={{
-          type: "progressbar",
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {rev.map((review) => (
-          <SwiperSlide key={review._id}>
-            <div className="my-16 mx-24 flex flex-col items-center">
-              <Rating
-                style={{ maxWidth: 180 }}
-                value={review.rating}
-                readOnly
-              />
-              <p className="py-4">{review.details}</p>
-              <h3 className="text2xl text-orange-600">{review.name}</h3>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="rounded-3xl bg-white/75 p-4 shadow-xl">
+        <Swiper
+          pagination={{ type: "fraction" }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {rev.map((review) => (
+            <SwiperSlide key={review._id}>
+              <div className="flex flex-col items-center gap-4 px-6 py-10 text-center md:px-12">
+                <Rating
+                  style={{ maxWidth: 180 }}
+                  value={review.rating}
+                  readOnly
+                />
+                <p className="text-sm md:text-base text-neutral-700 max-w-3xl">
+                  {review.details}
+                </p>
+                <h3 className="text-xl font-semibold text-primary">
+                  {review.name}
+                </h3>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 };

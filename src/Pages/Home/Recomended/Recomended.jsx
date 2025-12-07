@@ -17,24 +17,37 @@ const Recomended = () => {
       });
   }, []);
   return (
-    <div className="max-w-7xl my-12">
-      <div className="h-60 my-9 " style={{ backgroundImage: `url(${img2})` }}>
-        <h2 className="h-60 backdrop-blur-2xl  backdrop-saturate-50 text-black text-7xl text-center pt-14">
-          01406584258
-        </h2>
+    <section className="section-shell my-14">
+      <div
+        className="relative mb-10 overflow-hidden rounded-3xl bg-cover bg-center shadow-2xl"
+        style={{ backgroundImage: `url(${img2})` }}
+      >
+        <div className="absolute inset-0 bg-black/65"></div>
+        <div className="relative flex flex-col items-center justify-center gap-2 px-6 py-16 text-center text-white">
+          <p className="text-xs uppercase tracking-[0.3em] text-amber-200">
+            Reservations
+          </p>
+          <h2 className="text-3xl font-semibold">
+            Call us to reserve: 01406 584 258
+          </h2>
+          <p className="max-w-2xl text-sm text-white/80">
+            Prefer speaking to a host? Reach out and we will arrange the perfect
+            table for your occasion.
+          </p>
+        </div>
       </div>
-      <section>
-        <SectionTittle
-          heading={"CHEF RECOMMENDS"}
-          subHeading={"Should Try"}
-        ></SectionTittle>
-      </section>
-      <div className="grid md:grid-cols-4">
+
+      <SectionTittle
+        heading={"Chef Recommends"}
+        subHeading={"Should try"}
+      ></SectionTittle>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {menu.map((item) => (
           <RecoCard key={item._id} item={item}></RecoCard>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

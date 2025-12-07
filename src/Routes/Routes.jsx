@@ -2,6 +2,9 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Menu from "../Pages/Menu/Menu/Menu";
+import Shop from "../Pages/Shop/Shop";
+import Contact from "../Pages/Contact/Contact";
+import Reservation from "../Pages/Reservation/Reservation";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +18,18 @@ export const router = createBrowserRouter([
       {
         path: "menu",
         element: <Menu></Menu>,
+      },
+      {
+        path: "shop/:category?",
+        element: <Shop></Shop>,
+      },
+      {
+        path: "contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "reservation",
+        element: <Reservation></Reservation>,
       },
     ],
   },
